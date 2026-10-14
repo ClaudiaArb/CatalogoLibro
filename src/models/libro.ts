@@ -1,4 +1,4 @@
-export type GuardianReino = 'Dragón ' | 'Príncipe ' | 'Princesa ' | 'Caballero ';
+export type GuardianReino = 'Dragón 🐉' | 'Príncipe Aurion 👑' | 'Princesa Aurelia 👸' | 'Caballero Sir Gareth 🛡️';
 
 export interface ILibro {
     id: string;
@@ -7,4 +7,5 @@ export interface ILibro {
     fecha: number;
     estado: 'pendiente' | 'leido' | 'en progreso';
     guardian: GuardianReino;
+    descripcion?: string; 
 }

@@ -10,15 +10,12 @@ export class LibroView {
     public renderizarEstructuraBase(): void {
         this.appContainer.innerHTML = `
             <div class="contenedor-reino">
-                
-                <!-- Encabezado Principal -->
                 <header class="header-reino">
                     <h1>Catálogo del Reino: Libros y Dragones</h1>
                     <p>Registro y custodia de tomos ancestrales</p>
                 </header>
 
                 <main>
-                    <!-- Banner Visual con Ilustración del Castillo -->
                     <div class="banner-castillo">
                         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHFg3iio-dxZ7rdihR0iGQQKxs1mqMalmBL2Xxx80kX3ll0mVB9wpCvo8wnDjYv-BboMtxUQhGRwql_kd4sZcHtovQ7e3V7i0L-1gAMt41kAE7CtmBcxEKGiIRpBfPs_92OlqoD_WNY-dFZfav3fddGQaJjEF8RRhDZXRG8mFDMF7f1oD3XyHPFq9Hvix7EQnNnMSctB7Xn9qRRRftoR75s-oOLHeXblT3ejhDvFNk-owXX04stWc" alt="Castillo medieval del reino">
                         <div class="banner-contenido">
@@ -27,10 +24,7 @@ export class LibroView {
                         </div>
                     </div>
 
-                    <!-- Contenedor Bento (Formulario + Catálogo) -->
                     <div class="grid-principal">
-                        
-                        <!-- Formulario de Inscripción -->
                         <section class="seccion-formulario">
                             <h3>Inscribir Nuevo Libro</h3>
                             <form id="form-libro">
@@ -44,7 +38,6 @@ export class LibroView {
                                         <label for="autor">Autor o Escriba</label>
                                         <input type="text" id="autor" placeholder="Ej: Mago Merlín" required>
                                     </div>
-
                                     <div class="campo-formulario">
                                         <label for="fecha">Año de Creación</label>
                                         <input type="number" id="fecha" placeholder="Ej: 1450" required>
@@ -61,7 +54,6 @@ export class LibroView {
                                             <option value="Caballero Sir Gareth 🛡️">Caballero Sir Gareth 🛡️</option>
                                         </select>
                                     </div>
-
                                     <div class="campo-formulario">
                                         <label for="estado">Estado de Custodia</label>
                                         <select id="estado">
@@ -74,26 +66,20 @@ export class LibroView {
 
                                 <div class="campo-formulario">
                                     <label for="descripcion">Descripción del Libro</label>
-                                    <textarea id="descripcion" rows="3" placeholder="Escribe un breve resumen, reseña o historia del libro..."></textarea>
+                                    <textarea id="descripcion" rows="3" placeholder="Escribe un breve resumen..."></textarea>
                                 </div>
 
                                 <button type="submit" class="btn-inscribir">Inscribir en el Catálogo</button>
                             </form>
                         </section>
 
-                        <!-- Catálogo de Registros -->
                         <section class="seccion-catalogo">
                             <h3>Registros del Reino</h3>
-                            
                             <div class="campo-formulario">
                                 <input type="text" id="input-busqueda" placeholder="Buscar por título o autor...">
                             </div>
-
-                            <div id="lista-libros" class="grid-libros">
-                                <!-- Las tarjetas se cargan dinámicamente aquí -->
-                            </div>
+                            <div id="lista-libros" class="grid-libros"></div>
                         </section>
-
                     </div>
                 </main>
             </div>
@@ -116,6 +102,7 @@ export class LibroView {
                     <h4>${l.titulo}</h4>
                     <p class="tarjeta-info"><em>Por:</em> ${l.autor}</p>
                     <p class="tarjeta-info"><em>Año:</em> ${l.fecha}</p>
+                    ${l.descripcion ? `<p class="tarjeta-info" style="margin-top: 0.5rem; font-size: 0.85rem; color: #f2ca50;">"${l.descripcion}"</p>` : ''}
                     <div class="tarjeta-guardian">
                         Guardián: ${l.guardian || 'Dragón 🐉'}
                     </div>
