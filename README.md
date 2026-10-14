@@ -1,16 +1,20 @@
-# Catálogo del Reino: Libros y Dragones 🐉🏰
+# Catálogo del Reino - Laboratorio de Programación Orientada a Eventos
 
-Laboratorio de desarrollo frontend desarrollado bajo la arquitectura **MVC (Model-View-Controller)** y el paradigma de **Programación Orientada a Eventos**. La aplicación simula una biblioteca de fantasía medieval para la gestión, registro, filtrado y custodia de tomos ancestrales.
+Este proyecto es una aplicación web tipo catálogo de libros con una temática de fantasía medieval, desarrollada como parte de la práctica de la carrera de Ingeniería en Desarrollo de Software (UNIVO).
 
-## 🛠️ Tecnologías y Herramientas
-* **TypeScript** (Tipado estricto y módulos ES)
-* **HTML5 & CSS3** (Diseño responsivo con paleta temática y tipografías de Google Fonts: *Cinzel* y *EB Garamond*)
-* **LocalStorage** (Persistencia de datos en el navegador)
-* **Git y GitHub** (Control de versiones)
+## ¿Qué hace la aplicación?
+Permite llevar el registro y la administración de una biblioteca de tomos antiguos. Cuenta con las siguientes funciones:
+- **Inscripción de libros:** Formulario para agregar títulos indicando autor, año, estado de lectura, una descripción y un guardián asignado.
+- **Buscador en tiempo real:** Permite filtrar los libros instantáneamente mientras escribes el nombre o el autor.
+- **Eliminación de registros:** Opción para borrar tomos de la lista.
+- **Persistencia de datos:** Los datos se guardan en el navegador (`localStorage`) para que no se pierdan al recargar la página.
 
-## 🚀 Instrucciones de Ejecución
-1. Clona este repositorio en tu equipo local.
-2. Abre la carpeta del proyecto en **Visual Studio Code**.
-3. Compila los archivos TypeScript ejecutando en la terminal:
+## Tecnologías utilizadas
+- HTML5 y CSS3 (con estilos personalizados y tipografías de Google Fonts).
+- TypeScript aplicando la arquitectura MVC (Model-View-Controller) y programación orientada a eventos.
+
+## ¿Cómo ejecutarlo?
+1. Abrir la carpeta del proyecto en Visual Studio Code.
+2. Compilar los archivos de TypeScript con el comando:
    ```bash
    npx tsc
