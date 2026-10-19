@@ -52,5 +52,5 @@ Si deseas probar y evaluar el código fuente directamente en tu equipo, tienes d
 ### Opción B: Clonar el repositorio
 1. Abre tu terminal y ejecuta:
    ```bash
-   git clone [https://github.com/TU_USUARIO/TU_REPOSITORIO.git](https://github.com/ClaudiaArb/CatalogoLibro.git)
+   git clone(https://github.com/ClaudiaArb/CatalogoLibro.git)
    cd TU_REPOSITORIO
