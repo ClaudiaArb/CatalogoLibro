@@ -6,7 +6,7 @@ Aplicación web desarrollada como parte de la práctica de la carrera de Ingenie
 
 ##  Enlace en Línea (GitHub Pages)
 Puedes probar la aplicación directamente en tu navegador haciendo clic en el siguiente enlace:
- **[Ver Aplicación en Vivo](https://TU_USUARIO.github.io/TU_REPOSITORIO/)** 
+ **[Ver Aplicación en Vivo](https://claudiaarb.github.io/CatalogoLibro/)** 
 ---
 
 ##  ¿Qué hace la aplicación?
@@ -53,4 +53,4 @@ Si deseas probar y evaluar el código fuente directamente en tu equipo, tienes d
 1. Abre tu terminal y ejecuta:
    ```bash
    git clone(https://github.com/ClaudiaArb/CatalogoLibro.git)
-   cd TU_REPOSITORIO
+   cd CatalogoLibro
