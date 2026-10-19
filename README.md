@@ -6,8 +6,7 @@ Aplicación web desarrollada como parte de la práctica de la carrera de Ingenie
 
 ##  Enlace en Línea (GitHub Pages)
 Puedes probar la aplicación directamente en tu navegador haciendo clic en el siguiente enlace:
- **[Ver Aplicación en Vivo](https://TU_USUARIO.github.io/TU_REPOSITORIO/)** *(Asegúrate de reemplazar con tu enlace de GitHub Pages)*
-
+ **[Ver Aplicación en Vivo](https://TU_USUARIO.github.io/TU_REPOSITORIO/)** 
 ---
 
 ##  ¿Qué hace la aplicación?
