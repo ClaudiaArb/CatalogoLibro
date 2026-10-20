@@ -30,14 +30,19 @@ export class LibroController {
         if (formulario) {
             formulario.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                const titulo = document.getElementById('titulo').value;
-                const autor = document.getElementById('autor').value;
+                const titulo = document.getElementById('titulo').value.trim();
+                const autor = document.getElementById('autor').value.trim();
                 const fecha = Number(document.getElementById('fecha').value);
                 const genero = document.getElementById('genero').value;
                 const calificacion = Number(document.getElementById('calificacion').value);
                 const guardian = document.getElementById('guardian').value;
                 const estado = document.getElementById('estado').value;
-                const descripcion = document.getElementById('descripcion').value;
+                const descripcion = document.getElementById('descripcion').value.trim();
+                // 🛑 VALIDACIÓN DE SEGURIDAD (Evita crear registros vacíos o con año inválido)
+                if (!titulo || !autor || isNaN(fecha) || fecha <= 0) {
+                    alert('Por favor completa el título, autor y un año válido antes de registrar.');
+                    return; // Detiene la ejecución por completo y no crea nada
+                }
                 if (this.idLibroEditando) {
                     // Actualizar libro existente
                     this.libros = this.libros.map(l => {

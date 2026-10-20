@@ -40,14 +40,20 @@ export class LibroController {
             formulario.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
-                const titulo = (document.getElementById('titulo') as HTMLInputElement).value;
-                const autor = (document.getElementById('autor') as HTMLInputElement).value;
+                const titulo = (document.getElementById('titulo') as HTMLInputElement).value.trim();
+                const autor = (document.getElementById('autor') as HTMLInputElement).value.trim();
                 const fecha = Number((document.getElementById('fecha') as HTMLInputElement).value);
                 const genero = (document.getElementById('genero') as HTMLSelectElement).value as GeneroLibro;
                 const calificacion = Number((document.getElementById('calificacion') as HTMLSelectElement).value);
                 const guardian = (document.getElementById('guardian') as HTMLSelectElement).value as GuardianReino;
                 const estado = (document.getElementById('estado') as HTMLSelectElement).value as any;
-                const descripcion = (document.getElementById('descripcion') as HTMLTextAreaElement).value;
+                const descripcion = (document.getElementById('descripcion') as HTMLTextAreaElement).value.trim();
+
+                // 🛑 VALIDACIÓN DE SEGURIDAD (Evita crear registros vacíos o con año inválido)
+                if (!titulo || !autor || isNaN(fecha) || fecha <= 0) {
+                    alert('Por favor completa el título, autor y un año válido antes de registrar.');
+                    return; // Detiene la ejecución por completo y no crea nada
+                }
 
                 if (this.idLibroEditando) {
                     // Actualizar libro existente
